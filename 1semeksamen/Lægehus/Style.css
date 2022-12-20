@@ -1,0 +1,340 @@
+/* * dækker alt, border box så den selv medregner padding margin og border */
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+line-height: 1.5;
+
+}
+
+/* Nav bar */
+/* Nav barens baggrunds farve og størrelser */
+nav{
+background-color: #2ea4ff;
+height: 80px;
+width: 100%;
+}
+
+.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+display: inline-block;
+line-height: 80px;
+margin: 0 5px;
+}
+
+nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+/* Link hover i nav får en anden baggrunds farve. */
+a.active,a:hover{
+    background-color: #0082e6;
+    transition: .5s;
+}
+
+/* Nav  responsive */
+/* Har er brugt media quiries til at gøre nav baren responsive */
+@media (max-width: 1370px) {
+    label.logo{
+        font-size: 20px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+    font-size: 12px;
+    }
+}
+
+@media (max-width: 1000px) {
+    label.logo{
+        font-size: 18px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+    font-size: 10px;
+    }
+}
+
+/* Her ændres layoutet til mobil layout */
+@media (max-width: 950px){
+
+label.logo{
+   font-size: 28px;
+    
+ }
+  
+ul{
+    
+    width: 100%;
+    height: 70vh; 
+    top: 80px;
+    text-align: center;
+    transition: all .5s;
+}
+nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+nav ul li a{
+font-size: 20px;
+}
+a:hover,a.active{
+    background: none;
+    color: #0082e6;
+}
+}
+
+
+/* Midt content */
+.venstre{
+height: 80vh;
+width: 80%;
+background-color: #005099;  
+float: left;
+}
+
+.index{
+ width: 50%;   
+}
+.split1{
+  padding-left: 10%;
+  padding-top: 10%;  
+}
+
+h2{
+font-size: 32px;
+}
+
+h3{
+font-size: 26px;    
+}
+/* En knape type farve og udseende */
+.btn-split1{
+    background-color: #005099;
+    color: white;
+    border-radius: 5px;
+    padding: .5vh;
+}
+
+.split2{
+    transform: translatey(-80vh);
+    padding-left: 10%;
+    padding-top: 10%;
+    width:50%;
+    float: right;
+
+}
+
+.index2{
+    width:50%;
+}
+
+/* Border radius laver hjørnerne bløde */
+.btn-split2{
+    background-color: #0082e6;
+    color: white;
+    border-radius: 5px;
+    padding: .5vh;
+}
+
+/* Border style solid laver de sorte omrids */
+.højre{
+height: 30%;
+width: 20%;
+background-color: #bdbdbd;
+float: right;
+padding: 20px;
+border-style: solid;
+font-size: 18px;
+
+}
+
+h5{
+font-size: 24px;
+}
+
+.kort{
+margin-top: 1vh;
+max-height: 30vh;
+max-width: 35vh;
+}
+
+/* Index midter css */
+.split1{
+height: 100%;
+width: 50%;
+   background-color: #7ab6f5; 
+}
+
+/* Midter content responsive */
+
+/* Media queries brugt her til at lave den responsive */
+/* Delter op efter bredden af skærmen */
+@media (max-width: 1300px){
+.kort{
+   
+    max-width: 30vh;   
+}
+
+}
+
+@media (max-width: 1100px){
+    .kort{
+       
+        max-width: 25vh;   
+    }
+    
+    }
+    
+    @media (max-width: 1000px){
+        .kort{
+           
+            max-width: 20vh;   
+        }
+        
+        }
+/* 900px er mobil størrelsen */
+        @media (max-width: 900px){
+          .højre{
+        display: block;
+        width: 100%;
+        height: 40vh;
+          }
+
+          .kort{
+            
+            max-width: 30vh;
+            float: right;
+            transform: translatey(-15vh);
+        
+          }
+          .venstre{
+            width: 100%;
+          }  
+
+            }
+
+/* Footer */
+
+/* Hedder footer men er footer+baggrund */
+footer{
+display: block;
+max-width: 100%;
+max-height: 100%;
+background-color: #d1d1d1;
+}
+
+/* Her blever footeren opdelt i 3 kolenner, der hver fylder 33%.
+De får en top linje (border-top-style: solid;). 
+padding-left + text-align: left; sætter dem i venstre side med lidt luft */
+.footer-1{
+border-top-style: solid;
+padding-left: 10vh;
+width: 33%;
+text-align: left;
+display: inline-block;
+}
+
+.footer-2{
+    border-top-style: solid;
+width: 33%;
+text-align: left;
+padding-left: 10vh;
+display: inline-block;
+
+    }
+
+ .footer-3{
+    border-top-style: solid;
+    padding-top: 1.25vh;
+ width: 33%;
+ text-align: left;
+ padding-left: 10vh;
+ display: inline-block;
+   }
+
+/* Footer responsive */
+@media (max-width: 1200px){
+.footer-3{
+    width: 30%;
+    
+}
+}
+
+
+/* Kontakt os css */
+
+.kontakt {
+padding-left: 20%;
+padding-top: 3%;
+}
+
+
+/* Hvem er vi css */
+
+/* Billed størelse og position */
+.læge{
+width: 27%;
+float: right;
+padding-right: 10%;
+transform: translatey(-15vh);
+}
+
+.om-os-text{
+padding-top: 5vh;
+padding-left: 20%;
+}
+
+/* Selvbetjening css */
+
+/* Wrappen er brugt til at juster placeringen af formularen */
+.wrap-sb{
+ padding-left: 60vh;
+ padding-top: 10vh;
+  
+ 
+}
+
+.input-felt{
+padding-bottom: 1vh;
+display: flex;
+align-items: center;
+}
+
+/* Har for labelerne en størelse for at det hele kan stå pænt på række. */
+label{
+    width: 15vh;
+}
+
+/* Submit knappen bliver flyttet */
+.indsend{
+    transform: translatex(15vh);
+}
+
+
+/* Selvbetjening responsive */
+
+@media (max-width: 1600px){
+    .wrap-sb{
+ padding-left: 30%;
+    }
+}
+/* Tilmelding Bruger den samme css som selvbetjening */
